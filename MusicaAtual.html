@@ -1,1 +1,39 @@
-<p>Sem Música</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Musica Atual</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+</style>
+</head>
+
+<body>
+
+<img id="img" src="MusicaAtual.jpg">
+
+<script>
+function refreshImage() {
+    const img = document.getElementById("img");
+    const timestamp = new Date().getTime();
+    img.src = "MusicaAtual.jpg?t=" + timestamp;
+}
+
+// força atividade constante
+setInterval(refreshImage, 500);
+</script>
+
+</body>
+</html>
