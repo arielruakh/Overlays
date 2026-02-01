@@ -2,12 +2,14 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Musica Atual</title>
+<title>Música Atual</title>
 
 <style>
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     background: transparent;
     overflow: hidden;
 }
@@ -27,12 +29,11 @@ img {
 <script>
 function refreshImage() {
     const img = document.getElementById("img");
-    const timestamp = new Date().getTime();
-    img.src = "MusicaAtual.jpg?t=" + timestamp;
+    img.src = "MusicaAtual.jpg?t=" + Date.now();
 }
 
-// força atividade constante
-setInterval(refreshImage, 500);
+// mantém a página “ativa” (importante pro TikTok)
+setInterval(refreshImage, 2000);
 </script>
 
 </body>
