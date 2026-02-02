@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Música Atual</title>
+<title>Sem Música</title>
 
 <style>
 html, body {
@@ -24,15 +24,14 @@ img {
 
 <body>
 
-<img id="img" src="MusicaAtual.jpg">
+<img id="img" src="SemMusica.png">
 
 <script>
 function refreshImage() {
     const img = document.getElementById("img");
-    img.src = "MusicaAtual.jpg?t=" + Date.now();
+    img.src = "SemMusica.png?t=" + Date.now();
 }
 
-// mantém a página “ativa” (importante pro TikTok)
 setInterval(refreshImage, 2000);
 </script>
 
